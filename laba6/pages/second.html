@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Невероятный сайт</title>
+	<link rel="stylesheet" type="text/css" href="../style/style1.css">
+	<script type="text/javascript" src="../scripts/secondscript.js"></script>
+</head>
+<body>
+	
+	<div id="menu">
+		<div><a href="../index.html"><img src="../images/logo.jpg" width="250px"></a></div>
+		<div><a href="first.html">Задание 1</a></div>
+		<div><a href="second.html">Задание 2</a></div>
+		<div><a href="third.html">Задание 3</a></div>
+	</div>
+
+	<div id="content">
+		<div>
+			<form>
+			<fieldset id="fr1">
+			<legend>Задание 2</legend>
+			<h3>
+				Напишите функциюreplaceLast с двумя параметрами. Первый параметр - "что искать", второй - "на что заменить". Ваша функция должна возвращать строку, в контексте которой вызвана и в которой последнее вхождение подстроки "что искать" заменено на подстроку "на что заменить". 
+			</h3>
+			<p>
+				<input type="text" id="t1"> What to replace
+			</p>
+			<p>
+				<input type="text" id="t2"> Target text
+			</p>
+			<p>
+				<input type="button" value="Replace"
+				onclick="txt.textContent=replaceLast.call(txt.textContent, t1.value, t2.value)">
+			</p>
+			</fieldset>
+			<fieldset>
+				<p id='txt'>Вероятно, это самый незабываемый контент для сайта, который вы когда либо видели. Возможно на других страницах, на которые можно перейти по ссылкам левее, вы сможете найти что-то совсем потрясающее!</p>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+	
+
+</body>
+</html>

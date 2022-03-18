@@ -1,0 +1,239 @@
+body 
+{
+	background-image: url(../images/vid-sverkhu-les-derevia-makushki.jpg);
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+a{
+    color: black;
+    opacity: 2;
+    font-size: 300%;
+}
+p{
+    font-size: 130%;
+}
+
+#greeting
+{
+    width: 72.3%;
+    height: 150px;
+    color: black;
+    font-size: 130%;
+    text-align: center;
+    float: left;
+    background: rgba(255, 255, 255, .7);
+    border: 2px double orange;
+}
+
+#logo
+{   
+    position: absolute;
+    top: 8px;
+    right: 0.6%;
+    width: 26.8%;
+    height: 150px;
+    border: 2px double orange;
+
+}
+
+#menu{
+    position: absolute;
+    top: 161.5px;
+    left: 0.6%;
+    border: 2px double orange;
+    width: 26.8%;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+    line-height: 500%;
+    padding-top: 60px; 
+    padding-bottom: 60px;
+}
+
+#content{
+   position: absolute;
+   top: 161.5px;
+   left: 27.65%;
+   background: rgba(255, 255, 255, .7);
+   width: 44.42%;
+   height: 390px;
+   border: 2px double orange;
+}
+
+#content2{
+   position: absolute;
+   top: 161.5px;
+   left: 27.65%;
+   background: rgba(255, 255, 255, .7);
+   width: 44.42%;
+   height: 390px;
+   border: 2px double orange;
+   justify-content: center;
+   display: flex;
+}
+
+#news{
+    position: absolute;
+    top: 161.5px;
+    right: 0.6%;
+    background: rgba(255, 255, 255, .7);
+    border: 2px double orange;
+    width: 26.8%;
+    height: 390px;
+    font-size: 130%;
+    text-align: left;
+}
+
+#contact
+{
+    position: absolute;
+    border: 2px double orange;
+    width: 26.8%;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+    top: 555px;
+    left: 0.6%;
+    height: 125px;
+    font-size: 90%;
+}
+
+#ad
+{
+    position: absolute;
+   top: 555px;
+   left: 27.65%;
+   background: rgba(255, 255, 255, .7);
+   width: 44.42%;
+   height: 125px;
+   border: 2px double orange;
+   justify-content: center;
+   display: flex;
+}
+
+#author
+{
+    position: absolute;
+    border: 2px double orange;
+    width: 26.8%;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+    right: 0.6%;
+    top: 555px;
+    height: 125px;
+    font-size: 90%;
+}
+
+
+.anim:hover{
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);}
+
+
+.anim2:hover{
+-webkit-filter: invert(100%);
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 768px) {
+img{
+  width: 100%;
+  height: auto;
+}
+  #greeting
+{
+  position: absolute;
+  left: 0;
+  width:1365px;
+  height: 1000px;
+  background: rgba(255, 255, 255, .7);
+  size: 150%;
+  font-size: 510%;
+}
+#logo
+{   
+  position: absolute;
+  top: 1010px;
+  left: 0px;
+   width: 1365px;
+  height: 597px;
+  background: rgba(255, 255, 255, .7);
+}
+#menu{
+  position: absolute;
+  top: 1608px;
+  left: 0px;
+  width: 1365px;
+  height: 822px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: rgba(255, 255, 255, .7);
+  font-size: 250%;
+}
+#content{
+  position: absolute;
+  top: 2432px;
+  left: 0px;
+   width: 1365px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+  font-size: 550%;
+}
+#content2{
+  position: absolute;
+  top: 2432px;
+  left: 0px;
+   width: 1365px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+  font-size: 550%;
+}
+#news{
+  position: absolute;
+  top: 4595px;
+  left: 0;
+   width: 1335px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+  font-size: 500%;
+  padding-left: 30px;
+}
+#contact
+{
+  position: absolute;
+  top: 5628px;
+  left: 0px;
+  width: 1365px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+  font-size: 250%;
+}
+#ad
+{
+  position: absolute;
+  top: 5905px;
+  left:0;
+  width: 1365px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+}
+#author
+{
+  position: absolute;
+  top: 6446px;
+  left: 0px;
+  width: 1365px;
+  height: auto;
+  background: rgba(255, 255, 255, .7);
+}
+}
+
+
+
+
+

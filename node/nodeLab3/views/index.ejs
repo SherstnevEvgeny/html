@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="public/style1.css">
+</head>
+<body>
+<h1>CHOOSE THE PRODUCT</h1>
+
+<% data.forEach(function(item) { %>
+<p><a href='product-view/<%= item.name %>'><%= item.name %> </a><% }); %>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/public/style1.css">
+</head>
+<body>
+<p>
+<p>
+
+<% data.forEach(function(item) { %>
+<p>ID:<input id="idProd" value="<%= item.prodID %>">
+<p>Название:<input id="nameProd" value="<%= item.prodName %>">
+<p>Производитель:<input id="manufactProd" value="<%= item.prodManufact %>">
+<p>Цена:<input id="costProd" value="<%= item.prodCost %>">
+
+<p>Категория:<select id='idCat'>
+<% category.forEach(function(cat) { %>
+<% if (item.prodCat==cat.catID) { %>
+<option value=<%= cat.catID %> selected>
+<%= cat.catName %> </option>
+<% } else { %>
+<option value=<%= cat.catID %>><%= cat.catName %></option>
+<% }}); %>
+
+<p>
+<input type="button" id="edit" value="Изменить данные продукта">
+<input type="button" id="del" value="Удалить продукт">
+<p>
+<span id="ok"></span></p>
+<script>
+var xmlhttp;
+try {
+xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+} catch (e) {
+try {
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+} catch (E) {
+xmlhttp = false;
+}
+}
+if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+request = new XMLHttpRequest();
+}
+//Обработка кнопки "Изменить"
+document.getElementById("edit").addEventListener("click", function (e) {
+          
+			arr={idProd:document.getElementById('idProd').value,
+				nameProd:document.getElementById('nameProd').value,
+				manufactProd:document.getElementById('manufactProd').value,
+				costProd:document.getElementById('costProd').value,
+				
+				catProd:document.getElementById('idCat').value,
+				
+				}
+				
+			request.open("PUT", "http://localhost:3000/prod/<%= item.prodID %>", true);
+			request.setRequestHeader("Content-Type", "application/json");
+			
+			request.send(JSON.stringify(arr));
+			request.onreadystatechange = function(){
+			if (request.readyState == 4)
+			
+				document.getElementById('ok').innerHTML="Данные обновлены успешно!<p><a href='http://localhost:3000/prod'>Вернуться на главный</a>";
+				};
+         });
+		 
+document.getElementById("del").addEventListener("click", function (e) {
+			
+            arr={idProd:<%= item.prodID %>}
+			
+            request.open("DELETE", "http://localhost:3000/prod", true);
+			request.setRequestHeader("Content-Type", "application/json");
+			
+			request.send(JSON.stringify(arr));
+			request.onreadystatechange = function(){
+			if (request.readyState == 4)
+			
+				document.getElementById('ok').innerHTML="Данные обновлены успешно!<p><a href='http://localhost:3000/prod'>Вернуться на главный</a>";
+				};
+         });
+		
+
+</script>
+<% }); %>
+
+</body>

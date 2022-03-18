@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/public/style1.css">
+	
+</head>
+<body>
+
+<% if (Object.keys(data).length==0) {%>
+<p> нет товаров, число <%= data.length %>
+<% } 
+else 
+{ 
+%>
+<p>Применить фильтр по категориям
+<p>Категория:<select id='idCat'>
+<option value=0>Все</option>
+<% category.forEach(function(item) { %>
+
+<option value=<%= item.catID %>><%= item.catName %></option>
+<% }); %>
+</select>
+<div id="data">
+
+	<% data.forEach(function(item) { %>
+<p><a href='http://localhost:3000/prod/<%= item.prodID %>'><%= item.prodName %> </a><% });} %>
+</div>
+<p>
+<input type="button" value="Добавить продукт" id="newProd">
+<script>
+document.getElementById("newProd").addEventListener("click", function (e) {
+
+document.location="http://localhost:3000/prod/newProd";
+
+
+});
+request = new XMLHttpRequest();
+
+document.getElementById("idCat").addEventListener("change", function (e) {
+			request.open("GET", "http://localhost:3000/prod/?idCat="+document.getElementById('idCat').value, true);
+			request.setRequestHeader("Content-Type", "application/json");
+			request.addEventListener("readystatechange", () => {
+			if (request.readyState == 4)
+			{
+			s='';
+			
+			json=request.response;
+		
+			var data = JSON.parse(json);
+			
+			for (i=0;i<data.length;i++)
+			
+				s=s+"<p><a href='http://localhost:3000/prod/"+data[i].prodID+"'>"+data[i].prodName+"</a>";
+			
+			document.getElementById('data').innerHTML=s;
+			}
+			});
+			request.send();
+});			
+
+</script>
+</script>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/public/style1.css">
+</head>
+<body>
+Заполние данные товара
+<form action="http://localhost:3000/prod" method="post">
+<p>ID:<input name="idProd">
+<p>Наименование:<input name="nameProd">
+<p>Производитель:<input name="manufactProd">
+<p>Цена:<input name="costProd">
+<p>Категория:<select name='idCat'>
+<% data.forEach(function(item) { %>
+<!--формируем список отделов-->
+<option value=<%= item.catID %>><%= item.catName%></option>
+<% }); %>
+<p>
+<input type="submit" id="create" value="Добавить товар">
+</form>
+</body>
+

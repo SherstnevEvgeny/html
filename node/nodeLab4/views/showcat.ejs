@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/public/style1.css">
+</head>
+<body>
+<p>
+<p>
+<% result.forEach(function(item) { %>
+<p>Идентификатор:<%= item.catID %>
+<p>
+Название:<input id="nameCat" value="<%= item.catName %>">
+<p>
+<input type="button" id="edit" value="Изменить категорию">
+<input type="button" id="del" value="Удалить категорию">
+<p>
+<span id="ok"></span></p>
+<script>
+request = new XMLHttpRequest();
+document.getElementById("edit").addEventListener("click", function (e) {
+            arr={idCat:<%= item.catID %>,
+				nameCat:document.getElementById('nameCat').value
+				}
+            request.open("PUT", "http://localhost:3000/cat/<%= item.catID %>", true);
+			request.setRequestHeader("Content-Type", "application/json");
+			request.send(JSON.stringify(arr));
+			request.onreadystatechange = function(){
+			if (request.readyState == 4)
+				document.getElementById('ok').innerHTML="Данные обновлены успешно!<p><a href='http://localhost:3000/cat'>Вернуться на главный</a>";
+				};
+         });
+document.getElementById("del").addEventListener("click", function (e) {
+            arr={idCat:<%= item.catID %>}
+			request.open("DELETE", "http://localhost:3000/cat/", true);
+			request.setRequestHeader("Content-Type", "application/json");
+			request.send(JSON.stringify(arr));
+			request.onreadystatechange = function(){
+			if (request.readyState == 4)
+				document.getElementById('ok').innerHTML=request.responseText+"<p><a href='http://localhost:3000/cat'>Вернуться на главный</a>";
+				};
+         });
+</script>
+<% }); %>
+
+</body>

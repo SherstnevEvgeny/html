@@ -1,0 +1,104 @@
+body 
+{
+	background-image: url(../images/vid-sverkhu-les-derevia-makushki.jpg);
+}
+
+/*img{
+    max-width: 100%;
+    max-height: 100%;
+}*/
+
+
+a{
+    color: black;
+    opacity: 2;
+    font-size: 150%;
+}
+p{
+    font-size: 130%;
+}
+
+
+#menu{
+    position: absolute;
+    top: 0.6%;
+    left: 0.6%;
+    border: 2px double orange;
+    width: 26.8%;
+    height: 950px;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+    line-height: 500%;
+    padding-top: 60px; 
+    padding-bottom: 60px;
+
+}
+
+#content{
+   position: absolute;
+   top: 0.6%;
+   left: 27.65%;
+   background: rgba(255, 255, 255, .7);
+   width: 71%;
+   height: 1070px;
+   border: 2px double orange;
+   
+
+}
+
+
+
+
+#algm{
+  display: block;
+   margin-left: 25%;
+   margin-top: 10%;
+}
+
+#fow{
+  position: absolute;
+  top:600px;
+  left: 500px;
+}
+
+#bac{
+  position: absolute;
+  top:600px;
+  left: 400px;
+}
+
+
+#fr1{
+  width: 500px;
+  margin-left: 220px;
+  margin-top: 50px;
+}
+
+
+#la1{
+  margin-left: 100px;
+}
+
+#la2{
+  margin-left: 140px;
+}
+
+#la3{
+  margin-left: 95px;
+}
+
+#la4{
+  margin-left: 85px;
+}
+
+#la5{
+  margin-left: 90px;
+}
+
+#la6{
+  margin-left: 125px;
+}
+
+
+
+

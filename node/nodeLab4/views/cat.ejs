@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/public/style1.css">
+</head>
+<body>
+	<% data.forEach(function(item) { %>
+<p><a href='http://localhost:3000/cat/<%= item.catID %>'><%= item.catName %> </a><% }); %>
+<p>
+<input type="button" value="Создать новую категорию" id="new">
+<script>
+document.getElementById("new").addEventListener("click", function (e) {
+document.location="http://localhost:3000/cat/new";
+});
+</script>
+</body>
+</html>

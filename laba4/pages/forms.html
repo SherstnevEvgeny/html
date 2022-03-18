@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Невероятный сайт</title>
+	<link rel="stylesheet" type="text/css" href="../style/style1.css">
+	<script type="text/javascript" src="../scripts/script.js"></script>
+</head>
+<body>
+	
+	<div id="menu">
+		<div><a href="../index.html"><img src="../images/logo.jpg" width="250px"></a></div>
+		<div><a href="forms.html">Формы</a></div>
+		<div><a href="../pages/atf.html">Активация текстовых полей</a></div>
+		<div><a href="../pages/list.html">Работа со списком</a></div>
+		<div><a href="../pages/but.html">Изменение надписи на кнопке</a></div>
+		<div><a href="../pages/focus.html">Фокусировка поля</a></div>
+	</div>
+
+	<div id="content">
+		<div>
+			<form>
+			<fieldset id="fr1">
+			<legend>Личные данные</legend>
+			<p >
+				<label >Фамилия</label>
+				<input accesskey="9" id="la1" title="Нажмите alt+ctl+9"> 
+			</p>
+			<p> 
+				<label>Имя    </label>
+				<input accesskey="8" id="la2" title="Нажмите alt+ctl+8"> 
+			</p>
+			<p>
+				<label>Отчество</label>
+				 <input accesskey="7" id="la3" title="Нажмите alt+ctl+7"> 
+			</p>
+			</fieldset>
+			<fieldset id="fr1">
+			<legend>Данные о начислениях</legend>
+			<p >
+				<label >Начислено</label>
+				<input  id="la4"> 
+			</p>
+			<p> 
+				<label>Удержано</label>
+				<input  id="la5">
+			</p>
+			<p>
+				<label>Итого</label>
+				 <input id="la6"> 
+			</p>
+			<p>
+				<input type="button" value="Подсчитать"
+				onclick="sum()">
+			</p>
+			</fieldset>
+			</form>
+		</div>
+		<div id="fow">
+			<a href="atf.html"><img src="../images/fast-forward.png" width="50" height="50">
+		</div>
+		<div id="bac">
+			<a href="../index.html"><img src="../images/fast-backward.png" width="50" height="50">
+		</div>
+	</div>
+
+	
+
+</body>
+</html>
